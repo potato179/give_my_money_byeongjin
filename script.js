@@ -36,4 +36,22 @@ function getMoney(todayDate){
     $("#money").html(`${tot}원`);
     $("#receivedMoney").html(`${receivedMoney}원`);
     $("#remainMoney").html(`${tot-receivedMoney}원`);
+
+    var _100days = "";
+    for(var i = 1; i <= 100; i++){
+        diffDate += 1;
+        var tot = 54000;
+        tot += diffDate*1000;
+        if(diffDate <= 30){
+            tot += 40000*2;
+        }
+        else if(diffDate <= 90){
+            tot += 40000*5;
+        }
+        else if(diffDate <= 180){
+            tot += 40000*10;
+        }
+
+        _100days += `${i}일 후 상환금액: ${tot}<br>`;
+    }
 }
