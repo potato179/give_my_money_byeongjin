@@ -20,5 +20,5 @@ function getMoney(todayDate){
     const date2 = new Date(todayDate);
     
     const diffDate = date1.getTime() - date2.getTime();
-    console.log(diffDate / (1000 * 60 * 60 * 24));
+    console.log(`돈 빌린지 ${diffDate / (1000 * 60 * 60 * 24)*-1+1}일`);
 }
