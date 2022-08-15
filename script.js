@@ -52,7 +52,7 @@ function getMoney(todayDate){
             tot += 40000*10;
         }
 
-        _100days += `${i}일 후 상환금액: ${tot}<br>원`;
+        _100days += `${i}일 후 상환금액: ${tot}원<br>`;
     }
     $("#_100days").html(_100days);
 }
