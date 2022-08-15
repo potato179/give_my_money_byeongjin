@@ -14,11 +14,23 @@ function setClock(){
 }
 
 function getMoney(todayDate){
-    let tot;
+    var tot = 54000;
     var date1 = new Date(todayDate);
     var date2 = new Date("2022-07-22");
     
     var diffDate = date1.getTime() - date2.getTime();
     diffDate = diffDate/(1000 * 60 * 60 * 24)+1;
-    $("#money").html(diffDate);
+
+    tot += diffDate*1000;
+    if(diffDate <= 30){
+        tot += 40000*2;
+    }
+    else if(diffDate <= 90){
+        tot += 40000*5;
+    }
+    else if(diffDate <= 180){
+        tot += 40000*10;
+    }
+
+    $("#money").html(`${tot}원`);
 }
