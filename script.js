@@ -1,6 +1,5 @@
 window.onload = function(){
     setInterval(setClock, 1000);
-    setInterval(getMoney, 1000);
 }
 
 function setClock(){
@@ -16,9 +15,10 @@ function setClock(){
 
 function getMoney(todayDate){
     let tot;
-    const date1 = new Date("2022-07-22");
-    const date2 = new Date(todayDate);
+    var date1 = new Date("2022-07-22");
+    var date2 = new Date(todayDate);
     
-    const diffDate = date1.getTime() - date2.getTime();
-    console.log(`돈 빌린지 ${diffDate / (1000 * 60 * 60 * 24)*-1+1}일`);
+    var diffDate = date1.getTime() - date2.getTime();
+    diffDate = diffDate / (1000 * 60 * 60 * 24)*-1+1;
+    $("#money").html(diffDate);
 }
