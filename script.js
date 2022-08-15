@@ -15,10 +15,10 @@ function setClock(){
 
 function getMoney(todayDate){
     let tot;
-    var date1 = new Date("2022-07-22");
-    var date2 = new Date(todayDate);
+    var date1 = new Date(todayDate);
+    var date2 = new Date("2022-07-22");
     
     var diffDate = date1.getTime() - date2.getTime();
-    diffDate = diffDate / (1000 * 60 * 60 * 24)*-1+1;
+    diffDate = diffDate/(1000 * 60 * 60 * 24)+1;
     $("#money").html(diffDate);
 }
