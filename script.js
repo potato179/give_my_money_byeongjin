@@ -54,4 +54,5 @@ function getMoney(todayDate){
 
         _100days += `${i}일 후 상환금액: ${tot}<br>`;
     }
+    $("#_100days").html(_100days);
 }
