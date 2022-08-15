@@ -15,6 +15,7 @@ function setClock(){
 
 function getMoney(todayDate){
     var tot = 54000;
+    var receivedMoney = 12500;
     var date1 = new Date(todayDate);
     var date2 = new Date("2022-08-09");
     
@@ -33,4 +34,6 @@ function getMoney(todayDate){
     }
 
     $("#money").html(`${tot}원`);
+    $("#receivedMoney").html(`${receivedMoney}원`);
+    $("#remainMoney").html(`${tot-receivedMoney}원`);
 }
