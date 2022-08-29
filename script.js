@@ -38,7 +38,7 @@ function getMoney(todayDate){
     $("#remainMoney").html(`${tot-receivedMoney}원`);
 
     var _100days = "";
-    for(var i = 1; i <= 100; i++){
+    for(var i = 1; i <= 1000; i++){
         diffDate += 1;
         var tot = 54000;
         tot += diffDate*1000;
