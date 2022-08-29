@@ -38,9 +38,10 @@ function getMoney(todayDate){
     $("#remainMoney").html(`${tot-receivedMoney}원`);
 
     var _100days = "";
+    var tot = 0;
     for(var i = 1; i <= 1000; i++){
         diffDate += 1;
-        var tot = 54000;
+        tot = 54000;
         tot += diffDate*1000;
         if(diffDate <= 30){
             tot += 40000*2;
@@ -48,7 +49,7 @@ function getMoney(todayDate){
         else if(diffDate <= 90){
             tot += 40000*5;
         }
-        else if(diffDate <= 180){
+        else{
             tot += 40000*10;
         }
 
